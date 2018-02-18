@@ -1,0 +1,83 @@
+﻿<core:FragmentDefinition xmlns="sap.m"  xmlns:f="sap.ui.layout.form"
+	 xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+  <Panel expandable="true" expanded="false" headerText="{i18n>Status.HeaderText}" width="auto" class="sapUiResponsiveMargin"  noTabStop="true">
+    <content>
+      <VBox class="sapUiSmallMargin">
+  <f:SimpleForm 
+    editable="false"
+    layout="ResponsiveGridLayout"
+    singleContainerFullSize="true" >
+    <f:content>
+      <Label text="{i18n>Status.wifiSignalStrength}" />
+      <Text text="{status>/wifiSignalStrength}%" />
+      <!--<Label text="" />-->
+      <ProgressIndicator percentValue="{status>/wifiSignalStrength}" displayOnly="true" showValue="true" width="100px"/>
+
+      <Label text="{i18n>Status.batteryLevel}" />
+      <Text text="{status>/batteryLevel}%" />
+      <!--<Label text="" />-->
+      <ProgressIndicator percentValue="{status>/batteryLevel}" displayOnly="true" showValue="true" width="100px"/>
+      
+      <Label text="{i18n>Status.availableSpace}" />
+      <Text text="{parts:['status>/availableSpace','status>/totalSpace'], formatter: '.formatter.availableSpacePercentString'}%"/>
+      <!--<Label text="" />-->
+      <ProgressIndicator percentValue="{parts:['status>/availableSpace','status>/totalSpace'], formatter: '.formatter.availableSpacePercent'}" displayOnly="true" width="100px" />
+
+      <Label text="{i18n>Status.state}" />
+      <Text text="{status>/state}" />
+      
+      <Label text="{i18n>Status.recordingTime}" />
+      <Text text="{status>/recordingTime}" />
+
+      <Label text="{i18n>Status.availableSpace}" />
+      <Text text="{path: 'status>/availableSpace',formatter: '.formatter.bytesToMB'} GB" />
+
+      <Label text="{i18n>Status.totalSpace}" />
+      <Text text="{path: 'status>/totalSpace',formatter: '.formatter.bytesToMB'} GB" />
+
+
+      <Label text="{i18n>Status.gpsLatitude}" />
+      <Text text="{status>/gpsLatitude}" />
+
+      <Label text="{i18n>Status.gpsLongitude}" />
+      <Text text="{status>/gpsLongitude}" />
+
+
+      <Label text="{i18n>Status.recordingTimeRemaining}" />
+      <Text text="{status>/recordingTimeRemaining}" />
+      <Label text="{i18n>Status.photosRemaining}" />
+      <Text text="{status>/photosRemaining}" />
+      <Label text="{i18n>Status.photoCount}" />
+      <Text text="{status>/photoCount}" />
+
+
+      
+      <Label text="{i18n>Status.wifiMode}" />
+      <Text text="{status>/wifiMode}" />
+
+      <Label text="{i18n>Status.lastMediaEventTime}" />
+      <Text text="{status>/lastMediaEventTime}" />
+
+      <Label text="{i18n>Status.apiMin}" />
+      <Text text="{status>/apiMin}" />
+      <Label text="{i18n>Status.apiMax}" />
+      <Text text="{status>/apiMax}" />
+      
+      <Label text="{i18n>Status.batteryChargingState}" />
+      <Text text="{status>/batteryChargingState}" />
+      
+      <Label text="{i18n>Status.antSensor}" />
+      <Text text="{status>/antSensor}" />
+      <Label text="{i18n>Status.btSensor}" />
+      <Text text="{status>/btSensor}" />
+      <Label text="{i18n>Status.wifiSensor}" />
+      <Text text="{status>/wifiSensor}" />
+      <Label text="{i18n>Status.btHeadset}" />
+      <Text text="{status>/btHeadset}" />
+    </f:content>
+  </f:SimpleForm>
+</VBox>
+    </content>
+  </Panel>
+
+</core:FragmentDefinition>

@@ -1,0 +1,28 @@
+﻿<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="garmin.virb.camerahost.controller.Features" displayBlock="true">
+  <Page showNavButton="true" navButtonPress="onNavBack" id="page" title="{i18n>Features.title}">
+    <content>
+      <Panel expandable="true" expanded="false" headerText="{i18n>features.HeaderText}" width="auto" class="sapUiResponsiveMargin"  noTabStop="true">
+        <content>
+          <List items="{features>/features}" itemPress="onListItemPress" mode="SingleSelect">
+            <ActionListItem type="Navigation" text="{features>feature}: {path:'features>', formatter: '.formatter.oFeatureToDescription'}" press="onListItemPress"/>
+          </List>
+        </content>
+      </Panel>
+      <Panel expandable="true" expanded="false" headerText="{i18n>commands.HeaderText}" width="auto" class="sapUiResponsiveMargin"  noTabStop="true">
+        <content>
+          <List  itemPress="onCommandListItemPress" mode="SingleSelect">
+            <ActionListItem type="Navigation" text="{i18n>command.locate}" press="onCommandLocatePress"/>
+            <ActionListItem type="Navigation" text="{i18n>command.found}" press="onCommandFoundPress"/>
+            <ActionListItem type="Navigation" text="{i18n>command.stopStillRecording}" press="onCommandStopStillRecordingPress"/>
+            <ActionListItem type="Navigation" text="{i18n>command.standby}" press="onCommandStandByPress"/>
+            <ActionListItem type="Navigation" text="{i18n>command.getErrorLogURL}" press="onCommandLogErrorPress"/>
+          </List>
+        </content>
+      </Panel>
+          
+    </content>
+    <footer>
+      <core:Fragment fragmentName="garmin.virb.camerahost.view.fragments.Footer" type="XML" > </core:Fragment>
+    </footer>
+  </Page>
+</mvc:View>

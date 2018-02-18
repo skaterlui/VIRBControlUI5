@@ -1,0 +1,13 @@
+﻿<core:FragmentDefinition xmlns="sap.m"
+	 xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+  <Bar>
+    <contentMiddle>
+      <FlexBox fitContainer="true" justifyContent="SpaceAround">
+        <core:Icon activeBackgroundColor="white"  src="{path:'status>/state', formatter: '.formatter.sStateToIcon'}" size="2em"  noTabStop="true" tooltip="{i18n>record}" press="onRecord" color="{path:'status>/state', formatter: '.formatter.sStateToColor'}"/>
+        <core:Icon activeBackgroundColor="white" src="sap-icon://camera" size="2em" tooltip="{i18n>takeasnapshot}" press="onSnapShot" noTabStop="true"/>
+        <core:Icon activeBackgroundColor="white" src="sap-icon://picture" size="2em" tooltip="{i18n>showmedialist}" press="onNavigateToMedia" noTabStop="true"  />
+        <core:Icon  activeBackgroundColor="white" src="sap-icon://settings" size="2em" tooltip="{i18n>showsettings}" press="onNavigateToFeatures" noTabStop="true"/>        
+      </FlexBox>
+    </contentMiddle>
+  </Bar>
+</core:FragmentDefinition>

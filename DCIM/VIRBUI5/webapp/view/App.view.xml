@@ -1,0 +1,8 @@
+<mvc:View
+	controllerName="garmin.virb.camerahost.controller.App"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"	displayBlock="true"
+	xmlns="sap.m">
+  <App id="app">
+
+  </App>
+</mvc:View>

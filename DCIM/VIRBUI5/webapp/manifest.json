@@ -1,0 +1,141 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "garmin.virb.camerahost",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "garmin.virb.camerahost.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "garmin.virb.camerahost.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "garmin.virb.camerahost.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "transition": "slide",
+        "bypassed": {
+          "target": "notFound"
+        },
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "appHome",
+          "target": "home"
+        },
+        {
+          "pattern": "command",
+          "name": "appCommandList",
+          "target": "commandlist"
+        },
+        {
+          "pattern": "medialist/{action}",
+          "name": "appMediaList",
+          "target": "medialist"
+        },
+        {
+          "pattern": "media",
+          "name": "appMedia",
+          "target": "media"
+        },
+        {
+          "pattern": "features",
+          "name": "appFeatures",
+          "target": "features"
+        }
+      ],
+      "targets": {
+        "home": {
+          "viewId": "home",
+          "viewName": "Home",
+          "viewLevel": 1
+        },
+        "commandlist": {
+          "viewId": "commandlist",
+          "viewName": "CommandList",
+          "viewLevel": 2
+        },
+        "medialist": {
+          "viewId": "medialist",
+          "viewName": "MediaList",
+          "viewLevel": 2
+        },
+        "media": {
+          "viewId": "media",
+          "viewName": "Media",
+          "viewLevel": 3
+        },
+        "features": {
+          "viewId": "features",
+          "viewName": "Features",
+          "viewLevel": 2
+        },
+        "notFound": {
+          "viewId": "notFound",
+          "viewName": "NotFound",
+          "transition": "show"
+        }
+      }
+    }
+  }
+}

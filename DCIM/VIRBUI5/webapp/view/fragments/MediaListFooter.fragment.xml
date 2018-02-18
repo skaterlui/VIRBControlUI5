@@ -1,0 +1,23 @@
+﻿<core:FragmentDefinition xmlns="sap.m"
+	 xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+  <Bar>
+    <contentMiddle>
+  <FlexBox fitContainer="true" justifyContent="SpaceAround">
+    <HBox  alignItems="Baseline">
+      <core:Icon activeBackgroundColor="white"  src="{path: 'vm>/MediaTypeFilter', formatter: '.formatter.sMediaTypeFilterToIcon'}" size="2em" tooltip="{i18n>onFilter}" press="onFilter" noTabStop="true"/>
+      <Text text="{vm>/mediaCount}" class="sapUiSmallMarginBegin"/>
+    </HBox>
+    <!--<core:Icon src="sap-icon://picture" size="2em" tooltip="{i18n>showmedialist}" press="onFilterPhoto" noTabStop="true" />-->
+    <HBox  alignItems="Baseline">
+      <core:Icon activeBackgroundColor="white" src="{path: 'vm>/IsFav', formatter: '.formatter.bFavToIcon'}" size="2em" tooltip="{i18n>onFilterFavorite}" press="onFilterFavorite" noTabStop="true"/>
+      <Text text="{vm>/favCount}" class="sapUiSmallMarginBegin" />
+    </HBox>
+
+
+    <core:Icon activeBackgroundColor="white" src="{path: 'vm>/Property', formatter: '.formatter.iconFromProperty'}" size="2em" tooltip="{i18n>onSortProperty}" press="onSortProperty" noTabStop="true"/>
+    <core:Icon activeBackgroundColor="white" src="{path: 'vm>/bDescending', formatter: '.formatter.bDescendingToIcon'}" size="2em" tooltip="{i18n>onSortDirection}" press="onSortDirection" noTabStop="true"/>
+  
+  </FlexBox>
+  </contentMiddle>
+  </Bar>
+</core:FragmentDefinition>

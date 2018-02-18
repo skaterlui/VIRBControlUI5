@@ -1,0 +1,20 @@
+﻿<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" 	xmlns:l="sap.ui.layout"
+          controllerName="garmin.virb.camerahost.controller.MediaList">
+  <Page title="{i18n>MediaList.title}" class="sapUiResponsiveContentPadding" showNavButton="true" navButtonPress="onNavBack">
+    <content>
+      <List items="{path:'vm>/media', sorter: {path:'date', descending: true}}" id="idMediaList"
+            growing="true" growingThreshold="50" growingScrollToLoad="true">
+        <items>
+          <CustomListItem type="Active" press="onEditMedia">
+            <content>
+              <core:Fragment fragmentName="garmin.virb.camerahost.view.fragments.MediaListItem" type="XML" > </core:Fragment>
+            </content>
+          </CustomListItem>
+        </items>
+      </List>
+    </content>
+    <footer>
+      <core:Fragment fragmentName="garmin.virb.camerahost.view.fragments.MediaListFooter" type="XML" > </core:Fragment>
+    </footer>
+  </Page>
+</mvc:View>

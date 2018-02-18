@@ -1,0 +1,22 @@
+﻿<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" id="idUpdateFeatureDialog">
+  <Dialog title="{i18n>UpdateFeatureDialog.title}" type="Message" >
+    <content>
+      <VBox>
+        <Text text="{/feature}"  />
+        <List items="{/options}" id="idSelectOption">
+          <CustomListItem>
+            <RadioButton text="{}" groupName="groupA" selected="{parts:['/value',''], formatter: '.formatter.bIsOptionSelected'}" select="onOptionSelect"/>
+          </CustomListItem>
+        </List>
+      </VBox>
+    </content>
+    <beginButton>
+      <Button text="{i18n>UpdateFeatureDialog.confirm}" press="onConfirmDialog" enabled="{/isUpdated}"/>
+    </beginButton>
+    <endButton>
+      <Button text="{i18n>UpdateFeatureDialog.cancel}" press="onCancelDialog"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

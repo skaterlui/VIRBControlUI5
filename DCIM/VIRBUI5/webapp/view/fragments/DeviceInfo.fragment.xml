@@ -1,0 +1,28 @@
+﻿<core:FragmentDefinition xmlns="sap.m"  xmlns:f="sap.ui.layout.form"
+	 xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc">
+      <VBox class="sapUiSmallMargin">
+        <f:SimpleForm id="statusform"
+          editable="false"
+          layout="ResponsiveGridLayout"
+          title="{i18n>DeviceInfo.form.title}"
+          singleContainerFullSize="true" >
+          <f:content>
+
+            <Label text="{i18n>DeviceInfo.form.model}" />
+            <Text text="{deviceinfo>/deviceInfo/0/model}" />
+            <Label text="{i18n>DeviceInfo.form.firmware}" />
+            <Text text="{deviceinfo>/deviceInfo/0/firmware}" />
+
+            <Label text="{i18n>DeviceInfo.form.type}" />
+            <Text text="{deviceinfo>/deviceInfo/0/type}" />
+
+            <Label text="{i18n>DeviceInfo.form.partNumber}" />
+            <Text text="{deviceinfo>/deviceInfo/0/partNumber}" />
+
+            <Label text="{i18n>DeviceInfo.form.deviceId}" />
+            <Text text="{deviceinfo>/deviceInfo/0/deviceId}" />
+
+          </f:content>
+        </f:SimpleForm>
+      </VBox>  
+</core:FragmentDefinition>
