@@ -1,0 +1,155 @@
+{
+    "mediaDirs": [
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/104_VIRB",
+            "date": 883857146
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/105_VIRB",
+            "date": 887113201
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/106_VIRB",
+            "date": 887127924
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBControlUI5",
+            "date": 886879275
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5",
+            "date": 886962660
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBControlUI5/resources",
+            "date": 886190060
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBControlUI5/resources/sap",
+            "date": 886190060
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBControlUI5/resources/sap/m",
+            "date": 886190060
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBControlUI5/resources/sap/m/themes",
+            "date": 886190060
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBControlUI5/resources/sap/m/themes/base",
+            "date": 886190060
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBControlUI5/resources/sap/m/themes/sap_belize_plus",
+            "date": 886190061
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp",
+            "date": 887202301
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/controller",
+            "date": 887202301
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/css",
+            "date": 887202302
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/i18n",
+            "date": 887202302
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/localService",
+            "date": 887202302
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/model",
+            "date": 887202304
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/test",
+            "date": 887202304
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/view",
+            "date": 887202306
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/localService/json",
+            "date": 887202302
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/localService/photo",
+            "date": 887202303
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/localService/thumb",
+            "date": 887202304
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/test/integration",
+            "date": 887202304
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/test/unit",
+            "date": 887202305
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/test/integration/pages",
+            "date": 887202305
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/test/unit/controller",
+            "date": 887202305
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/VIRBUI5/webapp/test/unit/model",
+            "date": 887202305
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/.vs/VIRBUI5",
+            "date": 887052429
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/.vs/config",
+            "date": 887052986
+        },
+        {
+            "type": "mediadirectory",
+            "path": "2:/DCIM/.vs/VIRBUI5/v15",
+            "date": 887052429
+        }
+    ],
+    "result": 1
+}

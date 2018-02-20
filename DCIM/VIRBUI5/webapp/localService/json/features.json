@@ -1,0 +1,486 @@
+{
+    "features": [
+        {
+            "type": 0,
+            "feature": "locateCamera"
+        },
+        {
+            "type": 1,
+            "feature": "units",
+            "enabled": 1,
+            "value": "Metric",
+            "options": [
+                "Statute",
+                "Metric"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "gps",
+            "enabled": 1,
+            "value": "on",
+            "options": [
+                "off",
+                "on"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "externalPower",
+            "enabled": 1,
+            "value": "Charge Mode",
+            "options": [
+                "Power On",
+                "Charge Mode",
+                "Start Recording"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "rotation2",
+            "enabled": 1,
+            "value": "Auto",
+            "options": [
+                "Auto",
+                "Up",
+                "Down"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "microphoneAdvanced",
+            "enabled": 1,
+            "value": "Internal",
+            "options": [
+                "Auto",
+                "Internal",
+                "External",
+                "Ext(L) Int(R)",
+                "Off"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "recordingLED",
+            "enabled": 1,
+            "value": "on",
+            "options": [
+                "on",
+                "back",
+                "off"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "tones",
+            "enabled": 1,
+            "value": "20",
+            "options": [
+                "100",
+                "80",
+                "60",
+                "40",
+                "20",
+                "off"
+            ]
+        },
+        {
+            "type": 2,
+            "feature": "powerSave",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 2,
+            "feature": "wowlan",
+            "enabled": 0,
+            "value": "1"
+        },
+        {
+            "type": 1,
+            "feature": "friendlyName",
+            "enabled": 0,
+            "value": "7457"
+        },
+        {
+            "type": 1,
+            "feature": "shootingMode",
+            "enabled": 1,
+            "value": "videoShootingMode",
+            "options": [
+                "photoShootingMode",
+                "videoShootingMode"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoFormat",
+            "enabled": 1,
+            "value": "PAL",
+            "options": [
+                "NTSC",
+                "PAL"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoMode",
+            "enabled": 1,
+            "value": "Timelapse",
+            "options": [
+                "Video",
+                "Slow-Mo",
+                "Timelapse",
+                "Expansive"
+            ],
+            "optionSummaries": [
+                "1920x1080@30",
+                "1920x1080@120",
+                "timeLapse",
+                "1920x1080E@60"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoModeRes",
+            "enabled": 1,
+            "value": "2688x2028",
+            "options": [
+                "3840x2160",
+                "3840x2160E",
+                "2688x1512",
+                "2688x1520E",
+                "2688x2028",
+                "1920x1440E",
+                "1920x1080",
+                "1920x1080E"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "fieldOfView",
+            "enabled": 1,
+            "value": "wide",
+            "options": [
+                "wide"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoLoop",
+            "enabled": 1,
+            "value": "0",
+            "options": [
+                "0",
+                "5",
+                "10",
+                "20",
+                "30",
+                "60",
+                "Continuous"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "autoRecord",
+            "enabled": 1,
+            "value": "whenMoving",
+            "options": [
+                "off",
+                "whenMoving"
+            ]
+        },
+        {
+            "type": 2,
+            "feature": "videoLensCorrection",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 1,
+            "feature": "videoTravelapseInterval",
+            "enabled": 1,
+            "value": "10.00"
+        },
+        {
+            "type": 1,
+            "feature": "videoTimeLapseType",
+            "enabled": 1,
+            "value": "Travelapse",
+            "options": [
+                "Standard",
+                "Travelapse"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "lapsePlaybackFPS",
+            "enabled": 1,
+            "value": "25",
+            "options": [
+                "300",
+                "240",
+                "200",
+                "120",
+                "100",
+                "96",
+                "90",
+                "80",
+                "75",
+                "72",
+                "60",
+                "50",
+                "48",
+                "30",
+                "25",
+                "24"
+            ]
+        },
+        {
+            "type": 2,
+            "feature": "videoProSettingsEn",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 1,
+            "feature": "videoColorCurve",
+            "enabled": 1,
+            "value": "flat",
+            "options": [
+                "vivid",
+                "flat",
+                "dive"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoWhiteBalance",
+            "enabled": 1,
+            "value": "AUTO",
+            "options": [
+                "AUTO",
+                "2800K",
+                "4000K",
+                "5000K",
+                "6500K",
+                "7500K"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoSharpness",
+            "enabled": 1,
+            "value": "high",
+            "options": [
+                "low",
+                "medium",
+                "high"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoISOLimit",
+            "enabled": 1,
+            "value": "400",
+            "options": [
+                "6400",
+                "3200",
+                "1600",
+                "800",
+                "400"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "videoExposureBias",
+            "enabled": 1,
+            "value": "+0.0",
+            "options": [
+                "-2.0",
+                "-1.7",
+                "-1.3",
+                "-1.0",
+                "-0.7",
+                "-0.3",
+                "+0.0",
+                "+0.3",
+                "+0.7",
+                "+1.0",
+                "+1.3",
+                "+1.7",
+                "+2.0"
+            ]
+        },
+        {
+            "type": 2,
+            "feature": "videoExposureLock",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 2,
+            "feature": "videoHighBitrateMode",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 2,
+            "feature": "videoSpotMeter",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 1,
+            "feature": "photoMode",
+            "enabled": 1,
+            "value": "Single",
+            "options": [
+                "Single",
+                "Burst",
+                "Timelapse"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "selfTimer",
+            "enabled": 1,
+            "value": "Off",
+            "options": [
+                "Off",
+                "2",
+                "5",
+                "10",
+                "30",
+                "60"
+            ]
+        },
+        {
+            "type": 2,
+            "feature": "dataStamp",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 1,
+            "feature": "imageSize",
+            "enabled": 1,
+            "value": "3840x2160",
+            "options": [
+                "4000x3000",
+                "3840x2160"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "photoSingleType",
+            "enabled": 1,
+            "value": "Night",
+            "options": [
+                "Standard",
+                "Night",
+                "Bracket"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "photoNightExposureTime",
+            "enabled": 1,
+            "value": "Auto",
+            "options": [
+                "Auto",
+                "1s",
+                "5s"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "photoNightISOLimit",
+            "enabled": 1,
+            "value": "Auto",
+            "options": [
+                "Auto",
+                "800",
+                "400",
+                "200",
+                "100"
+            ]
+        },
+        {
+            "type": 2,
+            "feature": "photoProSettingsEn",
+            "enabled": 1,
+            "value": "1"
+        },
+        {
+            "type": 1,
+            "feature": "photoColorCurve",
+            "enabled": 1,
+            "value": "flat",
+            "options": [
+                "vivid",
+                "flat",
+                "dive"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "photoWhiteBalance",
+            "enabled": 1,
+            "value": "AUTO",
+            "options": [
+                "AUTO",
+                "2800K",
+                "4000K",
+                "5000K",
+                "6500K",
+                "7500K"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "photoSharpness",
+            "enabled": 1,
+            "value": "high",
+            "options": [
+                "low",
+                "medium",
+                "high"
+            ]
+        },
+        {
+            "type": 1,
+            "feature": "photoExposureBias",
+            "enabled": 1,
+            "value": "+0.0",
+            "options": [
+                "-2.0",
+                "-1.7",
+                "-1.3",
+                "-1.0",
+                "-0.7",
+                "-0.3",
+                "+0.0",
+                "+0.3",
+                "+0.7",
+                "+1.0",
+                "+1.3",
+                "+1.7",
+                "+2.0"
+            ]
+        },
+        {
+            "type": 2,
+            "feature": "photoSpotMeter",
+            "enabled": 1,
+            "value": "0"
+        },
+        {
+            "type": 2,
+            "feature": "photoLensCorrection",
+            "enabled": 1,
+            "value": "1"
+        }
+    ],
+    "result": 1
+}

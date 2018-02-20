@@ -14,8 +14,8 @@
                   linebreakS="true" />
               </layoutData>
             </Image>
-          <FlexBox id="idVideoBox" visible="{= ${vm>/imageVisible} === false }">
-            <core:HTML content='&lt;video controls=&quot;true&quot; src=&quot;test&quot; id=&quot;idVideo&quot; /&gt;'>
+          <FlexBox  id="idVideoBox" visible="{= ${vm>/imageVisible} === false }" >
+            <core:HTML content='&lt;video controls=&quot;true&quot; src=&quot;test&quot; class=&quot;videoBox&quot; id=&quot;idVideo&quot; /&gt;' >
             </core:HTML>
           </FlexBox>
           

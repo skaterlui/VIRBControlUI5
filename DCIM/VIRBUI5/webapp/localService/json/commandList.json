@@ -1,0 +1,101 @@
+{
+    "commandList": [
+        {
+            "command": "locate",
+            "version": 3
+        },
+        {
+            "command": "found",
+            "version": 3
+        },
+        {
+            "command": "stopRecording",
+            "version": 3
+        },
+        {
+            "command": "stopStillRecording",
+            "version": 3
+        },
+        {
+            "command": "startRecording",
+            "version": 3
+        },
+        {
+            "command": "snapPicture",
+            "version": 3
+        },
+        {
+            "command": "standby",
+            "version": 3
+        },
+        {
+            "command": "status",
+            "version": 3
+        },
+        {
+            "command": "deleteFile",
+            "version": 3
+        },
+        {
+            "command": "deleteFileGroup",
+            "version": 3
+        },
+        {
+            "command": "setFavorite",
+            "version": 4
+        },
+        {
+            "command": "mediaList",
+            "version": 3
+        },
+        {
+            "command": "mediaDirList",
+            "version": 3
+        },
+        {
+            "command": "deviceInfo",
+            "version": 3
+        },
+        {
+            "command": "livePreview",
+            "version": 4
+        },
+        {
+            "command": "enableIDR",
+            "version": 3
+        },
+        {
+            "command": "sensors",
+            "version": 3
+        },
+        {
+            "command": "updateFeature",
+            "version": 3
+        },
+        {
+            "command": "features",
+            "version": 3
+        },
+        {
+            "command": "restoreDefaults",
+            "version": 3
+        },
+        {
+            "command": "getErrorLogURL",
+            "version": 3
+        },
+        {
+            "command": "deleteErrorLog",
+            "version": 3
+        },
+        {
+            "command": "sw_update",
+            "version": 3
+        },
+        {
+            "command": "commandList",
+            "version": 3
+        }
+    ],
+    "result": 1
+}

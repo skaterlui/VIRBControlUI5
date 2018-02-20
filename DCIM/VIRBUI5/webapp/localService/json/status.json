@@ -1,0 +1,23 @@
+{
+    "apiMin": 3,
+    "apiMax": 3,
+    "batteryLevel": 91,
+    "batteryChargingState": 0,
+    "totalSpace": 121627648,
+    "availableSpace": 120127104,
+    "gpsLatitude": 49.050978,
+    "gpsLongitude": 11.997163,
+    "antSensor": 0,
+    "btSensor": 0,
+    "btHeadset": 0,
+    "wifiSensor": 0,
+    "recordingTimeRemaining": 15068,
+    "photosRemaining": 44483,
+    "photoCount": 0,
+    "recordingTime": 0,
+    "wifiSignalStrength": 40,
+    "wifiMode": "STA",
+    "state": "idle",
+    "lastMediaEventTime": 2375,
+    "result": 1
+}

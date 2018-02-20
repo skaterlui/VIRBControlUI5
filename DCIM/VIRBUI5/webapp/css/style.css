@@ -1,1 +1,12 @@
 /* Enter your custom styles here */
+@media screen and (min-width:768px) {
+    .videoBox {
+        width:100%;
+    }
+}
+
+@media screen and (max-width:767px) {
+        .videoBox {
+        width:90vw;
+    }
+}
