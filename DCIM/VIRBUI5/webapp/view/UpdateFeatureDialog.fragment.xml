@@ -4,10 +4,11 @@
   <Dialog title="{i18n>UpdateFeatureDialog.title}" type="Message" >
     <content>
       <VBox>
-        <Text text="{/feature}"  />
+        <Text text="{parts:['vm>/oBundle','/feature'], formatter: '.formatter.getFeatureText'}" class="sapUiSmallMarginButtom"  />
         <List items="{/options}" id="idSelectOption">
           <CustomListItem>
             <RadioButton text="{}" groupName="groupA" selected="{parts:['/value',''], formatter: '.formatter.bIsOptionSelected'}" select="onOptionSelect"/>
+            <!--<RadioButton text="{parts:['vm>/oBundle','/', ''],formatter: '.formatter.getFeatureOptionText'}" groupName="groupA" selected="{parts:['/value',''], formatter: '.formatter.bIsOptionSelected'}" select="onOptionSelect"/>-->
           </CustomListItem>
         </List>
       </VBox>

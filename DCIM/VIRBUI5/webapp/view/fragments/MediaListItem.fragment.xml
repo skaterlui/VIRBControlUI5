@@ -8,7 +8,7 @@
       </Image>
       <VBox>
       <ObjectIdentifier title="{vm>type}: {vm>name} - {path: 'vm>fileSize', formatter : '.formatter.bytesToMB'} MB" text="{i18n>MediaList.date}: {path: 'vm>date',	formatter: '.formatter.unixToDate'}" />
-      <Text text="{i18n>MediaList.Duration}: {vm>duration}" visible="{= ${vm>type} === 'video' }"/>  
+      <Label text="{i18n>MediaList.Duration}: {vm>duration}" visible="{= ${vm>type} === 'video' }" class="sapUiTinyMarginTop"/>  
       </VBox>
       
     </l:content>

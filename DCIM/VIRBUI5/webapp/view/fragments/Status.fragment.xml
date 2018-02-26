@@ -8,71 +8,71 @@
     layout="ResponsiveGridLayout"
     singleContainerFullSize="true" >
     <f:content>
-      <Label text="{i18n>Status.wifiSignalStrength}" />
+      <Label text="{i18n>status.wifiSignalStrength}" />
       <Text text="{status>/wifiSignalStrength}%" />
       <!--<Label text="" />-->
       <ProgressIndicator percentValue="{status>/wifiSignalStrength}" displayOnly="true" showValue="true" width="100px"/>
 
-      <Label text="{i18n>Status.batteryLevel}" />
+      <Label text="{i18n>status.batteryLevel}" />
       <Text text="{status>/batteryLevel}%" />
       <!--<Label text="" />-->
       <ProgressIndicator percentValue="{status>/batteryLevel}" displayOnly="true" showValue="true" width="100px"/>
       
-      <Label text="{i18n>Status.availableSpace}" />
+      <Label text="{i18n>status.availableSpace}" />
       <Text text="{parts:['status>/availableSpace','status>/totalSpace'], formatter: '.formatter.availableSpacePercentString'}%"/>
       <!--<Label text="" />-->
       <ProgressIndicator percentValue="{parts:['status>/availableSpace','status>/totalSpace'], formatter: '.formatter.availableSpacePercent'}" displayOnly="true" width="100px" />
 
-      <Label text="{i18n>Status.state}" />
+      <Label text="{i18n>status.state}" />
       <Text text="{status>/state}" />
       
-      <Label text="{i18n>Status.recordingTime}" />
+      <Label text="{i18n>status.recordingTime}" />
       <Text text="{status>/recordingTime}" />
 
-      <Label text="{i18n>Status.availableSpace}" />
+      <Label text="{i18n>status.availableSpace}" />
       <Text text="{path: 'status>/availableSpace',formatter: '.formatter.bytesToMB'} GB" />
 
-      <Label text="{i18n>Status.totalSpace}" />
+      <Label text="{i18n>status.totalSpace}" />
       <Text text="{path: 'status>/totalSpace',formatter: '.formatter.bytesToMB'} GB" />
 
 
-      <Label text="{i18n>Status.gpsLatitude}" />
+      <Label text="{i18n>status.gpsLatitude}" />
       <Text text="{status>/gpsLatitude}" />
 
-      <Label text="{i18n>Status.gpsLongitude}" />
+      <Label text="{i18n>status.gpsLongitude}" />
       <Text text="{status>/gpsLongitude}" />
 
 
-      <Label text="{i18n>Status.recordingTimeRemaining}" />
+      <Label text="{i18n>status.recordingTimeRemaining}" />
       <Text text="{status>/recordingTimeRemaining}" />
-      <Label text="{i18n>Status.photosRemaining}" />
+      <Label text="{i18n>status.photosRemaining}" />
       <Text text="{status>/photosRemaining}" />
-      <Label text="{i18n>Status.photoCount}" />
+      <Label text="{i18n>status.photoCount}" />
       <Text text="{status>/photoCount}" />
 
 
       
-      <Label text="{i18n>Status.wifiMode}" />
+      <Label text="{i18n>status.wifiMode}" />
       <Text text="{status>/wifiMode}" />
 
-      <Label text="{i18n>Status.lastMediaEventTime}" />
+      <Label text="{i18n>status.lastMediaEventTime}" />
       <Text text="{status>/lastMediaEventTime}" />
 
-      <Label text="{i18n>Status.apiMin}" />
+      <Label text="{i18n>status.apiMin}" />
       <Text text="{status>/apiMin}" />
-      <Label text="{i18n>Status.apiMax}" />
+      <Label text="{i18n>status.apiMax}" />
       <Text text="{status>/apiMax}" />
       
-      <Label text="{i18n>Status.batteryChargingState}" />
+      <Label text="{i18n>status.batteryChargingState}" />
       <Text text="{status>/batteryChargingState}" />
       
-      <Label text="{i18n>Status.antSensor}" />
+      <Label text="{i18n>status.antSensor}" />
       <Text text="{status>/antSensor}" />
-      <Label text="{i18n>Status.btSensor}" />
+      <Label text="{i18n>status.btSensor}" />
       <Text text="{status>/btSensor}" />
-      <Label text="{i18n>Status.wifiSensor}" />
+      <Label text="{i18n>status.wifiSensor}" />
       <Text text="{status>/wifiSensor}" />
-      <Label text="{i18n>Status.btHeadset}" />
+      <Label text="{i18n>status.btHeadset}" />
       <Text text="{status>/btHeadset}" />
     </f:content>
   </f:SimpleForm>

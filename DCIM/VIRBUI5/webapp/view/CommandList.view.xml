@@ -9,7 +9,7 @@
           <HBox>
             <core:Icon size="2rem" src="sap-icon://attachment-photo" class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" />
             <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
-              <Link text="{commandList>command}" press="handlePress"/>
+              <Link text="{parts:['vm>/oBundle','commandList>command'], formatter : '.formatter.getCommandText'}" press="handlePress"/>
               <Label text="{commandList>version}"/>
             </VBox>
           </HBox>
