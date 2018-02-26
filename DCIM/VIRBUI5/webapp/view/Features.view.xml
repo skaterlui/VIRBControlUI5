@@ -4,7 +4,7 @@
       <Panel expandable="true" expanded="false" headerText="{i18n>features.HeaderText}" width="auto" class="sapUiResponsiveMargin"  noTabStop="true">
         <content>
           <List items="{features>/features}" itemPress="onListItemPress" mode="SingleSelect">
-            <ActionListItem type="Navigation" text="{features>feature}: {path:'features>', formatter: '.formatter.oFeatureToDescription'}" press="onListItemPress"/>
+            <ActionListItem type="Navigation" text="{parts:['vm>/oBundle', 'features>feature'], formatter: '.formatter.getFeatureText'}: {parts:['vm>/oBundle', 'features>','features>value'], formatter: '.formatter.getFeatureOptionText'}" press="onListItemPress"/>
           </List>
         </content>
       </Panel>

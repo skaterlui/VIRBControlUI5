@@ -2,8 +2,9 @@
     "garmin/virb/camerahost/controller/BaseController",
     "garmin/virb/camerahost/localService/ICameraHost",
     "garmin/virb/camerahost/model/formatter",
-    "sap/m/MessageToast"
-], function (BaseController, ICameraHost, formatter, MessageToast) {
+    "sap/m/MessageToast",
+    "sap/ui/model/resource/ResourceModel"
+], function (BaseController, ICameraHost, formatter, MessageToast, ResourceModel) {
     "use strict";
 
     return BaseController.extend("garmin.virb.camerahost.controller.MediaList", {
@@ -12,19 +13,31 @@
         formatter: formatter,
 
         onInit: function () {
-            var oRouter = this.getRouter();
+            // set i18n model on view
+            var i18nModel = new ResourceModel({
+                bundleName: "garmin.virb.camerahost.i18n.i18n"
+            });
+            this.getView().setModel(i18nModel, "i18n");
+
+            // read msg from i18n model
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
             var oViewModel = new sap.ui.model.json.JSONModel();
             var oData = {
                 "IsFav": false,
-                "MediaTypeFilter": "",
+                "MediaTypeFilter": "all",
                 "media": "",
                 "bDescending": true,
                 "Property": "date",
+                "oBundle": oBundle
             };
             oViewModel.setData(oData);
             this.getView().setModel(oViewModel, "vm");
 
+
+            var oRouter = this.getRouter();
             oRouter.getRoute("appMediaList").attachMatched(this._onRouteMatched, this);
+
             this.getMediaList();
         },
 
@@ -82,6 +95,8 @@
             }
         },
 
+
+
         getMediaList: function () {
             var oList = this.getView().byId("idMediaList");
             oList.setBusy(true);
@@ -134,16 +149,15 @@
             switch (sMediaFilter) {
                 case "video":
                     sMediaFilter = "photo";
-                    MessageToast.show(sMediaFilter);
                     break;
                 case "photo":
-                    sMediaFilter = "";
-                    MessageToast.show(sMediaFilter);
+                    sMediaFilter = "all";
                     break;
                 default:
                     sMediaFilter = "video";
-                    MessageToast.show(sMediaFilter);
             }
+            MessageToast.show(this.getText("mediaList.filter" + sMediaFilter));
+
             this.getView().getModel("vm").setProperty("/MediaTypeFilter", sMediaFilter);
 
             this._applyFilter();
@@ -169,7 +183,7 @@
             var oMediaList = [];
 
             var resultFavorie = jQuery.grep(oJson.media, function (oMedia, i) {
-                if (oMedia.type === sMediaFilter || sMediaFilter === "") {
+                if (oMedia.type === sMediaFilter || sMediaFilter === "all") {
                     switch (true) {
                         case oMedia.fav === "true":
                             iFavCount = iFavCount + 1;
@@ -207,10 +221,10 @@
             var bDescending = this.getView().getModel("vm").getProperty("/bDescending");
             if (bDescending === true) {
                 this.getView().getModel("vm").setProperty("/bDescending", false);
-                MessageToast.show("ascending");
+                MessageToast.show(this.getText("mediaList.ascending"));
             } else {
                 this.getView().getModel("vm").setProperty("/bDescending", true);
-                MessageToast.show("descending");
+                MessageToast.show(this.getText("mediaList.descending"));
             }
             this._applyFilter();
         },
@@ -220,16 +234,16 @@
             switch (sProperty) {
                 case "date":
                     this.getView().getModel("vm").setProperty("/Property", "duration");
-                    MessageToast.show("duration");
+                    MessageToast.show(this.getText("mediaList.sortduration"));
 
                     break;
                 case "duration":
                     this.getView().getModel("vm").setProperty("/Property", "name");
-                    MessageToast.show("name");
+                    MessageToast.show(this.getText("mediaList.sortname"));
                     break;
                 case "name":
                     this.getView().getModel("vm").setProperty("/Property", "date");
-                    MessageToast.show("date");
+                    MessageToast.show(this.getText("mediaList.sortdate"));
                     break;
             }
             this._applyFilter();

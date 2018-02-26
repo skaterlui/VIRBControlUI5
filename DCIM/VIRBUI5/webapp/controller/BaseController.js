@@ -112,6 +112,11 @@
             this.getOwnerComponent().setModel(ICameraHost.status(), "status");
         },
 
+        getText: function (sKey) {
+            var oBundle = this.getView().getModel("vm").getProperty("/oBundle");
+            return oBundle.getText(sKey);
+        },
+
         onNavigateToFeatures: function (oEvent) {
             this.getRouter().navTo("appFeatures", {}, true /*no history*/);
         },

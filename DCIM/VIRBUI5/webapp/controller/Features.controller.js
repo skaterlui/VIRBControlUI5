@@ -1,8 +1,10 @@
 sap.ui.define([
 	"garmin/virb/camerahost/controller/BaseController",
     "garmin/virb/camerahost/model/formatter",
-    "garmin/virb/camerahost/localService/ICameraHost"
-], function (BaseController, formatter, ICameraHost) {
+    "garmin/virb/camerahost/localService/ICameraHost",
+   "sap/ui/model/resource/ResourceModel",
+    "sap/m/MessageToast"
+], function (BaseController, formatter, ICameraHost, ResourceModel, MessageToast) {
 	"use strict";
 
     return BaseController.extend("garmin.virb.camerahost.controller.Features", {
@@ -14,6 +16,20 @@ sap.ui.define([
             var oRouter = this.getRouter();
 
             oRouter.getRoute("appFeatures").attachMatched(this._onRouteMatched, this);
+
+            // set i18n model on view
+            var i18nModel = new ResourceModel({
+                bundleName: "garmin.virb.camerahost.i18n.i18n"
+            });
+            this.getView().setModel(i18nModel, "i18n");
+
+            // read msg from i18n model
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+
+            var oModel = new sap.ui.model.json.JSONModel();
+            oModel.setData({ "oBundle": oBundle });
+            this.getView().setModel(oModel, "vm");
+
         },
 
         onExit: function () {
@@ -41,7 +57,7 @@ sap.ui.define([
                 oModel.setData(data);
                 oController.getView().setModel(oModel, "features");
                 if (oList !== undefined) {
-                    oList.setBusy(true);
+                    oList.setBusy(false);
                 }
             });
 
@@ -49,13 +65,13 @@ sap.ui.define([
                 var oModel = ICameraHost.features();
                 oController.getView().setModel(oModel, "features");
                 if (oList !== undefined) {
-                    oList.setBusy(true);
+                    oList.setBusy(false);
                 }
             });
 
             oRequest.always(function (data) {
                 if (oList !== undefined) {
-                    oList.setBusy(true);
+                    oList.setBusy(false);
                 }
             });
         },
@@ -79,7 +95,7 @@ sap.ui.define([
 
                     break;
                 case 2:
-                    oFeatureModel.setProperty("/options", ["0", "1"])
+                    oFeatureModel.setProperty("/options", ["1", "0"])
                     break;
             }
 
@@ -93,8 +109,7 @@ sap.ui.define([
                 var sOption = oRadioButton.getText();
                 var oModel = this.getView().getModel("feature");
                 oModel.setProperty("/newvalue", sOption);
-                var oModel = this.getView().getModel("feature");
-                oModel.setProperty("/newvalue", sOption);
+
                 if (sOption !== oModel.getProperty("/value")) {
                     oModel.setProperty("/isUpdated", true);
                 } else {
@@ -131,6 +146,15 @@ sap.ui.define([
                 oController._getDialog().close();
                 var oModel = oController.getView().getModel("features");
                 oModel.setData(data);
+
+                var iResult = oModel.getProperty("/result");
+                if (iResult === 0 && window.location.host.indexOf("localhost") == -1) {
+                    var msg = " not successful";
+                    jQuery.sap.log.error(msg);
+                    
+                } else {
+                    MessageToast.show("Success!");
+                }
             });
             request.fail(function (e) {
                 oController._getDialog().close();

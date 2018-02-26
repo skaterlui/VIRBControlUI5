@@ -289,3 +289,9 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/DCIM/VIRBUI5/webapp/localService/thumb
+/DCIM/VIRBUI5/webapp/test
+/DCIM/VIRBUI5/webapp/localService/video
+/VIRBControlUI5.sln
+/DCIM/Web.config
+/DCIM/vwd.webinfo

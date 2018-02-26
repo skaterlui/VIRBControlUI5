@@ -1,8 +1,11 @@
-sap.ui.define(["sap/ui/core/format/DateFormat"
-], function (DateFormat) {
+sap.ui.define(["sap/ui/core/format/DateFormat",
+    "garmin/virb/camerahost/model/validation"
+], function (DateFormat, validation) {
 	"use strict";
 	return {
-	    DateFormat:DateFormat,
+	    DateFormat: DateFormat,
+
+	    validation : validation,
 
         availableSpacePercentString: function (nAvailableBytes, nTotalbBytes) {
             return (nAvailableBytes / nTotalbBytes * 100).format(0);
@@ -143,24 +146,6 @@ sap.ui.define(["sap/ui/core/format/DateFormat"
             }
         },
 
-        oFeatureToDescription: function (oFeature) {
-
-            if (oFeature === undefined || oFeature === null) {
-                return;
-            };
-            switch (oFeature.type) {
-                case 1:
-                    return oFeature.value;
-                    break;
-
-                default:
-                    if (oFeature.value === "1") {
-                        return "on";
-                    }
-                    return "off";
-            }
-        },
-
         sNumberToBoolean: function (sNumber) {
             if (sNumber === "1") {
                 return true;
@@ -234,7 +219,52 @@ sap.ui.define(["sap/ui/core/format/DateFormat"
                     break;
                 default:
             }
-        }
+        },
 
+        getCommandText: function (oBundle, sKey) {
+            try {
+                sKey = "command." + sKey;
+                return oBundle.getText(sKey);
+            } catch (e) {
+                
+            }
+        },
+
+        getFeatureText: function (oBundle, sKey) {
+            try {
+                sKey = "features." + sKey;
+                return oBundle.getText(sKey);
+            } catch (e) {
+
+            }
+        },
+
+        getFeatureOptionText: function (oBundle, oFeature, sKey) {
+            try {
+                if (oFeature === undefined || oFeature === null || sKey === null) {
+                    return "";
+                };
+
+                switch (oFeature.type) {
+                    case 1:
+                        if (validation.isNumeric(sKey.replace("+", "")) === true) {
+                            return sKey;
+                        }
+                        sKey = "features." + oFeature.feature + "." + sKey.replace(" ", "").replace("(L)", "L").replace("(R)", "R");
+                        return oBundle.getText(sKey);
+                        break;
+
+                    default:
+                        if (sKey === "1") {
+                            return oBundle.getText("features.on");
+                        }
+                        return oBundle.getText("features.off");
+                }
+
+
+            } catch (e) {
+                alert("ertter");
+            }
+        }
 	};
 });

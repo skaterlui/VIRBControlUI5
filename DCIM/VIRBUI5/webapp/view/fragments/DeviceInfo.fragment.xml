@@ -8,18 +8,18 @@
           singleContainerFullSize="true" >
           <f:content>
 
-            <Label text="{i18n>DeviceInfo.form.model}" />
+            <Label text="{i18n>deviceInfo.model}" />
             <Text text="{deviceinfo>/deviceInfo/0/model}" />
-            <Label text="{i18n>DeviceInfo.form.firmware}" />
+            <Label text="{i18n>deviceInfo.firmware}" />
             <Text text="{deviceinfo>/deviceInfo/0/firmware}" />
 
-            <Label text="{i18n>DeviceInfo.form.type}" />
+            <Label text="{i18n>deviceInfo.type}" />
             <Text text="{deviceinfo>/deviceInfo/0/type}" />
 
-            <Label text="{i18n>DeviceInfo.form.partNumber}" />
+            <Label text="{i18n>deviceInfo.partNumber}" />
             <Text text="{deviceinfo>/deviceInfo/0/partNumber}" />
 
-            <Label text="{i18n>DeviceInfo.form.deviceId}" />
+            <Label text="{i18n>deviceInfo.deviceId}" />
             <Text text="{deviceinfo>/deviceInfo/0/deviceId}" />
 
           </f:content>
