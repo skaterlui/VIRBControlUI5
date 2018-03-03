@@ -20,7 +20,7 @@ You can try connecting your cam directly with ip address or over well known rout
 * http://garmin-wifi.fritz.box/DCIM/index.html 
 * http://192.168.178.153/DCIM/index.html
 
-<!--**or connect directly to your VIRBs wireless network**-->
+**...or connect directly to your VIRBs wireless network**
 
 3. Create folder DCIM/VIRBUI5/resources
 4. Download and unzip [open ui5 mobile](http://openui5.org/download.html) to DCIM/VIRBUI5/resources folder
