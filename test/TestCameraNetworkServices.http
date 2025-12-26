@@ -1,0 +1,48 @@
+### Camrea command status
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"status"}
+
+### Camrea command features
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"features"}
+
+### Camera command livePreview
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"livePreview","streamType": "rtp","maxResolutionVertical":
+"1920", "liveStreamActive": "0" }
+
+### Camera command sensors
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"sensors"}
+
+### Camera command networks
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"networks", "subCommand": "getScannegetApSSID"}
+
+### Camera command mediaList
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"mediaList"}
+
+### Camera command deviceInfo
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"deviceInfo"}
+
+### Camera command commandList
+POST http://garmin-wifi/virb
+Content-Type: text/json; charset=utf-8
+
+{"command":"commandList"}
